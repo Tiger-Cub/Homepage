@@ -158,18 +158,20 @@ html{
   color: rgb(0, 0, 0); /* Text color on hover */
 }
 
-/* 父容器初始化计数器 */
+/* ===== 自动编号 + 紧凑间距 ===== */
+
+/* 初始化计数器 */
 .publication-list {
   counter-reset: pub-counter;
 }
 
-/* 每条论文条目让计数器 +1 */
+/* 每条论文：计数器 +1，清除浏览器默认的 p 上下边距 */
 .pub-item {
   counter-increment: pub-counter;
- 
+  margin: 0;                     /* 把所有边距归零 */
 }
 
-/* 在条目最前面自动插入 [序号] ，样式与你原来的 [1] 完全一致 */
+/* 自动生成序号 */
 .pub-item::before {
   content: "[" counter(pub-counter) "] ";
   font-size: 14.0pt;
@@ -177,19 +179,7 @@ html{
   color: #333333;
 }
 
-/* 所有论文条目的默认上下边距统一改小 */
-.pub-item {
-  counter-increment: pub-counter;
-  margin-top: 0;
-  margin-bottom: 0.3em;   /* 条目之间的间距，自己调舒服的值 */
-}
-
-/* 恢复第一个条目顶部的空白（可选，想让列表离上方标题远一点可加上） */
-.pub-item:first-child {
-  margin-top: 1em;
-}
-
-/* 恢复最后一个条目底部的空白（可选） */
-.pub-item:last-child {
-  margin-bottom: 1em;
+/* 只在两个相邻条目之间加一个很小的间隔（不影响到第一条的上方、最后一条的下方） */
+.pub-item + .pub-item {
+  margin-top: 0.3em;             /* 这个值就是条目之间的间距，可改为 0.3em 或 0.5em */
 }
