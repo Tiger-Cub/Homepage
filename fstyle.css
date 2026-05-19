@@ -2,7 +2,21 @@ body {
   max-width: 1100px;
   margin: 0 auto;
   padding: 20px 40px;
-  font: 18px/1.5 "Times New Roman", "宋体", SimSun, "Noto Serif CJK SC", serif;
+  /* 保持原来的 font 简写不动，它负责字号、行高和后备无衬线体 */
+  font: 18px/1.5 -apple-system, BlinkMacSystemFont, /* MacOS and iOS */
+               'avenir next', avenir, /* MacOS and iOS */
+               'Segoe UI', /* Windows */
+               'lucida grande', /* Older MacOS */
+               'helvetica neue', helvetica, /* Older MacOS */
+               'Fira Sans', /* Firefox OS */
+               roboto, noto, /* Google stuff */
+               'Droid Sans', /* Old Google stuff */
+               cantarell, oxygen, ubuntu, /* Linux stuff */
+               'franklin gothic medium', 'century gothic', /* Windows stuff */
+               'Liberation Sans', /* Linux */
+               sans-serif; /* Everything else */;
+  /* 👇 下面这行是新增的，它会覆盖上面的无衬线字体，变成可爱的衬线字体 */
+  font-family: "Times New Roman", "SimSun", "宋体", "Noto Serif CJK SC", serif;
   color: #444;
 }
 
