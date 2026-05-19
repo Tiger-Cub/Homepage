@@ -157,3 +157,21 @@ html{
 #myBtn:hover {
   color: rgb(0, 0, 0); /* Text color on hover */
 }
+
+/* 父容器初始化计数器 */
+.publication-list {
+  counter-reset: pub-counter;
+}
+
+/* 每条论文条目让计数器 +1 */
+.pub-item {
+  counter-increment: pub-counter;
+}
+
+/* 在条目最前面自动插入 [序号] ，样式与你原来的 [1] 完全一致 */
+.pub-item::before {
+  content: "[" counter(pub-counter) "] ";
+  font-size: 14.0pt;
+  font-family: 'Comic Sans MS';
+  color: #333333;
+}
