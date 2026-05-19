@@ -177,6 +177,19 @@ html{
   color: #333333;
 }
 
-/* 只控制连续两个论文条目之间的间距 */
-.pub-item + .pub-item {
-  margin-top: 0.1em;   /* 数字可自行调整，建议0.2~0.5em */
+/* 所有论文条目的默认上下边距统一改小 */
+.pub-item {
+  counter-increment: pub-counter;
+  margin-top: 0;
+  margin-bottom: 0.3em;   /* 条目之间的间距，自己调舒服的值 */
+}
+
+/* 恢复第一个条目顶部的空白（可选，想让列表离上方标题远一点可加上） */
+.pub-item:first-child {
+  margin-top: 1em;
+}
+
+/* 恢复最后一个条目底部的空白（可选） */
+.pub-item:last-child {
+  margin-bottom: 1em;
+}
