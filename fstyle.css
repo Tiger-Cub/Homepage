@@ -176,3 +176,7 @@ html{
   font-family: 'Comic Sans MS';
   color: #333333;
 }
+
+/* 只控制连续两个论文条目之间的间距 */
+.pub-item + .pub-item {
+  margin-top: 0.1em;   /* 数字可自行调整，建议0.2~0.5em */
