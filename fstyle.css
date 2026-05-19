@@ -2,18 +2,7 @@ body {
   max-width: 1100px;
   margin: 0 auto;
   padding: 20px 40px;
-  font: 18px/1.5 -apple-system, BlinkMacSystemFont, /* MacOS and iOS */
-               'avenir next', avenir, /* MacOS and iOS */
-               'Segoe UI', /* Windows */
-               'lucida grande', /* Older MacOS */
-               'helvetica neue', helvetica, /* Older MacOS */
-               'Fira Sans', /* Firefox OS */
-               roboto, noto, /* Google stuff */
-               'Droid Sans', /* Old Google stuff */
-               cantarell, oxygen, ubuntu, /* Linux stuff */
-               'franklin gothic medium', 'century gothic', /* Windows stuff */
-               'Liberation Sans', /* Linux */
-               sans-serif; /* Everything else */;
+  font: 18px/1.5 "Times New Roman", "宋体", SimSun, "Noto Serif CJK SC", serif;
   color: #444;
 }
 
